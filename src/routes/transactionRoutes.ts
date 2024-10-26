@@ -3,6 +3,7 @@ import {
   createTransaction,
   getTransactions,
 } from "../controllers/transactionController";
+import { Router } from "express";
 
 const router = Router();
 
