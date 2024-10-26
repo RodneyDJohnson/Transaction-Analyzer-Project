@@ -1,0 +1,31 @@
+{
+  "name": "transaction-analyzer-project",
+  "version": "1.0.0",
+  "description": "Spending &amp; Transaction Analyzer**   A React and TypeScript tool for analyzing financial data with category filters, spending insights, and CSV export. Styled-components provide clear UX for tracking overspending and budgeting trends, making it ideal for personal finance management.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node src/server.ts",
+    "start": "node dist/server.js",
+    "build": "tsc",
+    "watch": "ts-node-dev src/server.ts",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.1",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10"
+  }
+}
