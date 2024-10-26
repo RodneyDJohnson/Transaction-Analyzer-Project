@@ -1,6 +1,6 @@
 import authRoutes from "./authRoutes";
 import express from "express";
-import transactionRoutes from "src/routes/transactionRoutes";
+import transactionRoutes from "./transactionRoutes";
 
 const router = Router();
 
