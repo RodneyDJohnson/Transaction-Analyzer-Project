@@ -1,13 +1,22 @@
-import authRoutes from "./authRoutes";
-import express from "express";
-import transactionRoutes from "./transactionRoutes";
+// authRoutes.ts
+
 import { Router } from "express";
+import transactionRoutes from "./transactionRoutes";
 import someMiddleware from "../someMiddleware";
 
-const router = express.Router();
+const authRoutes = Router();
 
-router.use("/transactions", transactionRoutes);
-router.use("/auth", authRoutes);
-router.use(someMiddleware);
+// Define authentication-related routes//
+authRoutes.get("/login", (req, res) => {
+  res.send("Login route");
+});
 
-export default router;
+authRoutes.get("/register", (req, res) => {
+  res.send("Register route");
+});
+
+// Use other routes
+authRoutes.use("/transactions", transactionRoutes);
+authRoutes.use("/someMiddleware", someMiddleware);
+
+export default authRoutes;

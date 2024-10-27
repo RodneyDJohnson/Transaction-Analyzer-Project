@@ -1,8 +1,7 @@
-import express from "express";
+import express, { Router } from "express";
 import transactionRoutes from "./transactionRoutes";
 import userRoutes from "./userRoutes";
 import authRoutes from "./authRoutes";
-import { Router } from "express";
 import {
   createTransaction,
   getTransactions,
@@ -10,11 +9,13 @@ import {
 
 const router = Router();
 
-router.use("/transactions", transactionRoutes);
-router.use("/users", userRoutes);
-router.use("/auth", authRoutes);
-router.use("/transactionRoutes", transactionRoutes);
-router.get("/", getTransactions); // GET /transactions
-router.post("/", createTransaction); // POST /transactions
+router.use("/transactions", transactionRoutes); // handles transaction routes
+router.use("/users", userRoutes); // handles user routes
+router.use("/auth", authRoutes); // handles auth routes
+router.get("users", getTransactions); // GET /users
+router.post("users", createTransaction); // POST /users
+
+router.get("/transactions", getTransactions); // GET /transactions
+router.post("/transactions", createTransaction); // POST /transactions
 
 export default router;

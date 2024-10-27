@@ -1,3 +1,5 @@
+// Purpose: Controller for transaction routes//
+
 import { Request, Response } from "express";
 import { Transaction } from "../models/transactionModel";
 

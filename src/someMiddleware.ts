@@ -1,6 +1,6 @@
 // Import necessary modules
 import { Request, Response, NextFunction } from "express";
-import { Transaction } from "../models/transactionModel";
+import { Transaction } from "./models/transactionModel";
 import { Router } from "express";
 import express from "express";
 
